@@ -95,23 +95,29 @@ else {
 
 characterList = [];
 
-console.log(characterList + "PRE");
+console.log(characterList + " PRE");
 
 if (lowerChoice) {
-characterList += lowerCase;
-
+//characterList += lowerCase;  
+//^ found out above does not work as I intended with arrays, and resulted with commas being included unintentionally.
+characterList = characterList.concat(lowerCase);
+//^ by using concat, the arrays combine without commas being included
+console.log(characterList + " lc");
 }
 
 if (upperChoice) {
-  characterList += upperCase;
+  characterList = characterList.concat(upperCase);
+  console.log(characterList + " uc");
 
 }
 if (specialChoice) {
-  characterList += specialChar;
+  characterList = characterList.concat(specialChar);
+  console.log(characterList + " sc");
 }
 
 if (numberChoice) {
-  characterList += numberList;
+  characterList = characterList.concat(numberList);
+  console.log(characterList + " NC");
 }
 
 
