@@ -62,23 +62,14 @@ while (loop == 0) {
 
 lowerChoice = window.confirm("Include lowercase characters? ");
 
-if (lowerChoice) {
-  window.alert("Password includes lowercase characters.");
-}
 
 upperChoice = window.confirm("Include uppercase characters? ");
-if (upperChoice) {
-window.alert("Password includes uppercase characters");
-}
+
+
 numberChoice = window.confirm("Include numbers? ");
-if (numberChoice) {
-window.alert("Password includes numbers");
-}
 
 specialChoice = window.confirm("Include special characters? ");
-if (specialChoice) {
-window.alert("Special characters included");
-}
+
 
 if ( (!lowerChoice) && (!upperChoice) && (!specialChoice) && (!numberChoice) ) {
   window.alert("ERROR, YOU MUST CHOOSE AT LEAST 1 CHARACTER TYPE TO INCLUDE IN PASSWORD");
@@ -95,7 +86,6 @@ else {
 
 characterList = [];
 
-console.log(characterList + " PRE");
 
 if (lowerChoice) {
 //characterList += lowerCase;  
